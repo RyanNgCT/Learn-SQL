@@ -1,3 +1,6 @@
+-- configs
+USE testdb;
+
 CREATE TABLE IF NOT EXISTS people(
 	p_id INTEGER PRIMARY KEY,
 	p_name VARCHAR(255),
@@ -7,7 +10,7 @@ CREATE TABLE IF NOT EXISTS people(
 
 INSERT INTO people VALUES(1, 'Hohn Jammond', 30, 1.75);
 INSERT INTO people VALUES(2, 'Chris Greer', 40, 1.8);
-INSERT INTO people VALUES(3, 'Nobody');
+INSERT INTO people VALUES(3, 'Nobody',  NULL, NULL);
 INSERT INTO people(p_id, p_age) VALUES(4, 10); -- insert only specified values
 
 SELECT * FROM people; -- retrieve all values
